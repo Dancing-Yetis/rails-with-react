@@ -6,7 +6,9 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/terminal_theme.css';
 import 'styles/viking_theme.css';
+import 'styles/layout.css';
 
+import AuthMenu from 'components/auth_menu';
 import NotesBoard from 'components/notes_board';
 import { hydrateBoardStore } from 'stores/global/board_store';
 import { connectToCable } from 'stores/global/cable_store';
@@ -32,5 +34,11 @@ const root = ReactDOM.createRoot(document.getElementById('application-root'));
 root.render(
   <StrictMode>
     <NotesBoard />
+  </StrictMode>
+);
+
+ReactDOM.createRoot(document.getElementById('auth-menu-root')).render(
+  <StrictMode>
+    <AuthMenu />
   </StrictMode>
 );

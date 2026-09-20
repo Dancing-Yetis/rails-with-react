@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# App currently has no auth so any session may view any board.
+# Board policy defines who can see boards (right now: everyone)
 class BoardPolicy < ApplicationPolicy
   def show?
     true

@@ -1,9 +1,13 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  # No auth — same local-only caveat as Grafana's anonymous admin login (see
-  # the README's Observability section).
+  resource :session
+  resources :registrations, only: :create
+  resources :passwords, only: %i[create update], param: :token
+
   mount Sidekiq::Web => '/sidekiq'
+
+  get "up" => "rails/health#show", as: :rails_health_check
 
   # Rails' whole job for a page load: authorize, then serve the same empty shell.
   # React Router (frontend/app/javascript/router.jsx) owns everything under "/".

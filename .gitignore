@@ -38,6 +38,9 @@
 /public/vite*
 node_modules
 /app/javascript/node_modules
+/vitest-results
+/app/javascript/.vitest
+/vitest-report.md
 # Vite uses dotenv and suggests to ignore local-only env files. See
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
@@ -51,7 +54,15 @@ node_modules
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/e2e/.auth/
+/playwright-report.md
+/allure-results/
+/allure-report/
 
 # Docker scan artifacts
 /rails-with-react.sbom
 /rails-with-react-cves.md
+
+# Assorted
+.cache/**
+.bash_history

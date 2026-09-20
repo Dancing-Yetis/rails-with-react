@@ -38,7 +38,7 @@ gem 'pyroscope-otel'
 # gem 'connection_pool'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -75,6 +75,7 @@ end
 
 group :test do
   gem 'rails-controller-testing'
+  gem 'rspec-openapi', require: false          # https://github.com/exoego/rspec-openapi
   gem 'shoulda-matchers'                       # https://github.com/thoughtbot/shoulda-matchers
   gem 'simplecov', require: false              # https://github.com/simplecov-ruby/simplecov
   gem 'simplecov-json', require: false         # https://github.com/vicentllongo/simplecov-json
