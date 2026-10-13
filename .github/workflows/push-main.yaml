@@ -224,7 +224,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          tags: ${{vars.IMAGE_NAME}}:latest,${{vars.IMAGE_NAME}}:${{ steps.tags.outputs.build_tag }}
+          tags: ${{vars.IMAGE_NAME}}:latest,${{ steps.tags.outputs.tags }}
           attests: type=sbom,generator=docker/buildkit-syft-scanner:stable-1
           cache-from: type=gha
           cache-to: type=gha,mode=max
