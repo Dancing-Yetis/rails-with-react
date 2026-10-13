@@ -270,7 +270,7 @@ jobs:
           output: rails-with-react-cves.json
           sarif-file: rails-with-react-cves.sarif
           only-fixed: true
-          write-comment: true
+          write-comment: false
 
       # Code scanning and attestations are only for what is published from main
       - name: Upload CVE results to code scanning
