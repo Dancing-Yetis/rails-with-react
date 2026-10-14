@@ -133,4 +133,3 @@ Scanning and attestation occurs in multiple layers
 - Node: [npm audit](https://docs.npmjs.com/cli/v12/commands/npm-audit)
 - Docker (SBOM/CVEs): ["docker scout"](https://docs.docker.com/scout/)
 
-
